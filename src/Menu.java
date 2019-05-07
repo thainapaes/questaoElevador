@@ -6,30 +6,6 @@ import java.util.Scanner;
 
 public class Menu {
 
-    /**public static void Menu() {
-     Scanner input = new Scanner(System.in);
-     ElevadorController elevador =  new ElevadorController();
-
-     System.out.println("Deseja: "
-     + "\n 1- Adicionar um novo predio" + "\n 2- Trabalhar com os predios");
-
-     int opcao = input.nextInt();
-
-     switch (opcao) {
-     case 1:
-     Opcao1();
-     break;
-
-     case 2:
-     Opcao2();
-     break;
-
-     default:
-     break;
-     }
-     input.close();
-
-     }*/
 
     public static ArrayList<Integer> Opcao1(ArrayList<Integer> lista) {
         Scanner inputOpcUm = new Scanner(System.in);
@@ -57,65 +33,6 @@ public class Menu {
         return passageiroList;
     }
 
-
-    /**public static void Opcao2() {
-     Scanner inputOpcDois = new Scanner(System.in);
-     PassageiroController passageiro = new PassageiroController();
-     ElevadorController elevador = new ElevadorController();
-
-     System.out.println("Selecione a operação desejada:" + "\n1- Buscar os predios"
-     + "\n2- Adicionar Passageiro" + "\n3- Voltar ao menu principal");
-     int opcao = inputOpcDois.nextInt();
-
-
-     switch (opcao) {
-     case 1:
-     PredioElevador[] arrayPredio = elevador.buscarPredios();
-     for (int i = 0; i < arrayPredio.length; i++) {
-     System.out.println(arrayPredio[i].toString());
-     }
-     System.out.println("Deseja: \n1-Adicionar outro passageiro?\n2-Retornar ao Menu Principal?");
-     int n = inputOpcDois.nextInt();
-
-     do {
-     if (n == 1) {
-     Opcao2();
-     } else {
-     Menu();
-     }
-     } while (n != 1 && n != 2);
-     break;
-
-     case 2:
-     System.out.println("Qual o predio?");
-     int predio = inputOpcDois.nextInt();
-     System.out.println("Qual o andar que o passaeiro está?");
-     int atual = inputOpcDois.nextInt();
-     System.out.println("Para qual andar o passageiro deseja ir?");
-     int destino = inputOpcDois.nextInt();
-     passageiro.selecionarAndar(atual, destino);
-
-     System.out.println("Deseja: \n1-Adicionar outro passageiro?\n2-Retornar ao Menu Principal?");
-     int mm = inputOpcDois.nextInt();
-
-     do {
-     if (mm == 1) {
-     Opcao2();
-     } else {
-     Menu();
-     }
-     } while (mm != 1 && mm != 2);
-     break;
-
-     case 3:
-     Menu();
-     break;
-
-     default:
-     break;
-     }
-     inputOpcDois.close();
-     }*/
 
     public static void OpcaoGeral() {
         Scanner inputGeral = new Scanner(System.in);
