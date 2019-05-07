@@ -13,14 +13,21 @@ public class PassageiroController implements IPassageiro {
     @Override
     public int selecionarAndar(int andares, int andarInicial, ArrayList<Integer> lista) {
         int resposta = 0;
+        boolean flag = false;
         for (int elem : lista) {
             if (elem < andares && elem > 0) {
-               resposta = sobeOuDesce(andarInicial, lista);
+               flag = true;
             } else {
-                throw new NumeroIncorretoException("Algum andar inserido é negativo ou maior que o limite.");
+                flag = false;
+                break;
             }
         }
 
+        if (flag) {
+            resposta = sobeOuDesce(andarInicial, lista);
+        } else {
+            throw new NumeroIncorretoException("Algum andar inserido é negativo ou maior que o limite.");
+        }
         return resposta;
     }
 
