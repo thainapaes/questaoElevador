@@ -14,9 +14,9 @@ Dado agora um prédio de 20 andares e 1 elevador, que atualmente está no tercei
 
 Levando em consideração as duas questões anteriores construa um algoritmo genérico que solucione os dois casos anteriores."
 
-Foi levado em consideração que:
-  1- O passageiro escolhe o andar antes de entrar;
-  2- Os andares tem o mesmo tamanho;
-  3- O tempo para passar de um andar a outro é de 20 segundos;
-  4- A posição do array recebido no menu é de [onde o passagero se encontra, para onde ele vai];
+<b>Foi levado em consideração que:</b>
+  <b>1</b>- O passageiro escolhe o andar antes de entrar;
+  <b>2-</b> Os andares tem o mesmo tamanho;
+  <b>3-</b> O tempo para passar de um andar a outro é de 20 segundos;
+  <b>4-</b> A posição do array recebido no menu é de [onde o passagero se encontra, para onde ele vai];
 
