@@ -1,5 +1,6 @@
 package controllers;
 
+import excecoes.NumeroIncorretoException;
 import interfaces.IPassageiro;
 
 import java.util.ArrayList;
@@ -11,7 +12,16 @@ public class PassageiroController implements IPassageiro {
 
     @Override
     public int selecionarAndar(int andares, int andarInicial, ArrayList<Integer> lista) {
-        return sobeOuDesce(andarInicial, lista);
+        int resposta = 0;
+        for (int elem : lista) {
+            if (elem < andares && elem > 0) {
+               resposta = sobeOuDesce(andarInicial, lista);
+            } else {
+                throw new NumeroIncorretoException("Algum andar inserido é negativo ou maior que o limite.");
+            }
+        }
+
+        return resposta;
     }
 
     private int sobeOuDesce(int andarInicial, ArrayList<Integer> lista) {
@@ -32,7 +42,6 @@ public class PassageiroController implements IPassageiro {
                         atualElevador = destino;
                         tempoTotal = tempoTotal + qtdAndares;
                     }
-                    //count++;
                     verificacao(atualElevador, lista);
                 }
                 count++;
